@@ -28,6 +28,6 @@
       "@vitejs/plugin-react"
     ],
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/*.spec.ts"] // Exclude tests if any
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
