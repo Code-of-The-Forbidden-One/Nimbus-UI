@@ -1,5 +1,7 @@
 # Nimbus UI
 
+![Nimbus Cloud](./meta/media/nimbus.png)
+
 # TODO:
 
 - Add React Testing Library
