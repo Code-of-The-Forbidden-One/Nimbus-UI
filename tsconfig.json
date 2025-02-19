@@ -2,6 +2,9 @@
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+    { "path": "./tsconfig.node.json" },
+    { "path": "packages/nimbus-react" },
+    { "path": "packages/nimbus-preact" },
+    { "path": "packages/nimbus-react-native" }
   ]
 }

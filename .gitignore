@@ -9,13 +9,18 @@ lerna-debug.log*
 
 # Node modules
 node_modules/
+**/node_modules/
 
 # Build output
 dist/
 dist-ssr/
+build/
+storybook-static/
 
 # Environment variables
 .env
+.env.local
+.env.*.local
 
 # Editor directories and files
 .vscode/*
@@ -33,10 +38,10 @@ dist-ssr/
 
 # Vite
 .vite/
-build/
 
 # RTL
 coverage/
 
-# Yarn
-yarn-error.log
+# Turbo
+.turbo/
+turbo.log
