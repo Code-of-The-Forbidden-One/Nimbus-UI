@@ -4,34 +4,34 @@ Here is an overview of the tools used in this project. You are not expected
 to be immediately familiar with all of these right away, please explore some
 of the docs but don't be afraid to ask questions in the community.
 
-- React
-- Preact (TBC)
-- React Native (TBC)
-- TypeScript
+- [React](https://react.dev/)
+- [Preact](https://preactjs.com/)
+- [React Native](https://reactnative.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## Testing
 
-- React Testing Library
-- Jest
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Jest](https://jestjs.io/)
 
 ## Documentation
 
-- Storybook
+- [Storybook](https://storybook.js.org/)
 
 ## Linting and Code Quality
 
-- ESLint
-- Prettier
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
 ## CI/CD
 
-- Github Actions (TBC)
+- [Github Actions](https://docs.github.com/en/actions)
 
 ## Package Management
 
-- Yarn
+- [Yarn](https://yarnpkg.com/)
 
 ## Build Tools
 
-- Vite 
-- Turbo
+- [Vite](https://vite.dev/)
+- [Turbo](https://turbo.build/)
