@@ -4,8 +4,9 @@
     "composite": true,
     "declaration": true,
     "declarationMap": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "types": ["jest", "node", "vite", "@vitejs/plugin-react", "vite/client", "vitest"]
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*", "__tests__/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
 }
