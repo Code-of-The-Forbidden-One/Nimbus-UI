@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig, UserConfig } from 'vite';
 import preact from '@preact/preset-vite';
 import path from 'path';
 
@@ -20,4 +20,10 @@ export default defineConfig({
       },
     },
   },
-});
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './__tests__/setup.ts',
+    css: true,
+  },
+} as UserConfig);
