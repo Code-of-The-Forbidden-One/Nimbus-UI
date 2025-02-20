@@ -8,6 +8,7 @@
     "run-build": "turbo run build",
     "run-lint": "turbo run lint",
     "run-format": "turbo run format",
+    "run-test": "turbo run test",
     "run-preview": "vite preview",
     "run-check-types": "tsc --noEmit"
   },

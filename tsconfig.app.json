@@ -4,8 +4,8 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "outDir": "./dist",
-    "types": ["node", "vite", "@vitejs/plugin-react"]
+    "types": ["node", "vite", "@vitejs/plugin-react", "vite/client", "vitest"]
   },
-  "include": ["packages/*/src/**/*"],
+  "include": ["packages/*/src/**/*", "packages/*/__tests__/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

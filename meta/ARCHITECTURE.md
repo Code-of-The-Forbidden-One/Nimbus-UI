@@ -6,15 +6,15 @@ Nimbus-UI is designed as a **monorepo**, enabling modular development while main
 
 Nimbus-UI follows a **monorepo** architecture to:
 
-- **Enable Independent Package Imports** – Users can selectively import components from `nimbus-react`, `nimbus-preact`, or `nimbus-react-native` without unnecessary dependencies.
+- **Enable Independent Package Imports** – Users can selectively import components from `nimbus-core`, `nimbus-preact`, or `nimbus-react-native` without unnecessary dependencies.
 - **Ensure Consistency** – Shared logic lives in `nimbus-core`, preventing code duplication and maintaining alignment across implementations.
 - **Simplify Maintenance** – Updates to shared logic propagate across all frameworks automatically.
 - **Improve Developer Experience** – A unified repo streamlines CI/CD, testing, and cross-package development.
 
 ### **Folder Structure**
 
-- /packages /nimbus-core # Common shared functionality and base components
-- /nimbus-react # React-specific wrappers around core components
+- /packages
+- /nimbus-core # Common shared functionality and base components
 - /nimbus-preact # Preact-specific wrappers
 - /nimbus-react-native # React Native wrappers for mobile support
 
@@ -48,7 +48,7 @@ To support multiple frameworks, Nimbus-UI uses a core package (nimbus-core) that
 ## Why use nimbus-core?
 
 - Reduces Code Duplication – Core logic is implemented once and reused across all frameworks.
-- Ensures Consistency – Changes in nimbus-core apply automatically across nimbus-react, nimbus-preact, and nimbus-react-native.
+- Ensures Consistency – Changes in nimbus-core apply automatically across nimbus-core, nimbus-preact, and nimbus-react-native.
 - Easier Maintenance – Fixes and updates in one place benefit all consumers.
 
 ## How it Works
@@ -59,7 +59,7 @@ The core package (nimbus-core) contains:
 - Common utilities (e.g., theming, accessibility helpers).
 - Shared logic across all frameworks.
 
-Each wrapper package (nimbus-react, nimbus-preact, nimbus-react-native) then adapts the core components to fit its respective framework.
+Each wrapper package (nimbus-core, nimbus-preact, nimbus-react-native) then adapts the core components to fit its respective framework.
 
 Example (Not a real implementation):
 
@@ -73,14 +73,6 @@ interface ButtonBaseProps extends React.ButtonHTMLAttributes<HTMLButtonElement> 
 
 export const ButtonBase: React.FC<ButtonBaseProps> = ({ children, as: Component = 'button', ...props }) => {
   return <Component {...props}>{children}</Component>;
-};
-
-// packages/nimbus-react/Button.tsx
-import React from 'react';
-import { ButtonBase } from '@nimbus-ui/nimbus-core';
-
-export const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = (props) => {
-  return <ButtonBase {...props} />;
 };
 
 // packages/nimbus-preact/Button.tsx
