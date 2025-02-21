@@ -4,6 +4,7 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "type": "module",
   "dependencies": {
     "@nimbus/core": "workspace:*",
     "@testing-library/jest-native": "^5.4.3",
@@ -23,6 +24,7 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.26.3",
     "@babel/preset-env": "^7.26.9",
     "@babel/preset-react": "^7.26.3",
     "@babel/preset-typescript": "^7.26.0",

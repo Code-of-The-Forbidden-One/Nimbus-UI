@@ -10,7 +10,6 @@ const config: Config.InitialOptions = {
     '/node_modules/(?!@react-native|your-other-packages-to-transform).+',
   ],
   testEnvironment: "jsdom",
-  setupFiles: ["<rootDir>/__tests__/setup.ts"],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
 };
 

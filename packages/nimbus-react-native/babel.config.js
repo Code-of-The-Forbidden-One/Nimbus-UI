@@ -3,3 +3,7 @@ export const presets = [
   'module:metro-react-native-babel-preset',
   '@babel/preset-typescript',
 ];
+
+export const plugins = [
+  '@babel/plugin-transform-modules-commonjs',
+];
