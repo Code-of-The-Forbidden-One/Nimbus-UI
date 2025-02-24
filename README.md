@@ -4,7 +4,6 @@
 
 # TODO:
 
-- Add React Testing Library
 - Add StoryBook
 - Add CI Integration
 - Update Architecture.md

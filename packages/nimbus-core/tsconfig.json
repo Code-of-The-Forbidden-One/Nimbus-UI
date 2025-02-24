@@ -5,7 +5,15 @@
     "declaration": true,
     "declarationMap": true,
     "outDir": "dist",
-    "types": ["jest", "node", "vite", "@vitejs/plugin-react", "vite/client", "vitest"]
+    "types": [
+      "jest",
+      "node",
+      "vite",
+      "@vitejs/plugin-react",
+      "vite/client",
+      "vitest",
+      "@types/storybook__react",
+    ]
   },
   "include": ["src/**/*", "__tests__/**/*"],
   "exclude": ["node_modules", "dist", "**/*.spec.ts"]

@@ -14,11 +14,16 @@
     "lint": "eslint .",
     "test": "vitest --run",
     "format": "prettier --write .",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "storybook": "storybook dev -p 4000"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^8.5.8",
+    "@storybook/cli": "^8.5.8",
+    "@storybook/react-vite": "^8.5.8",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
+    "@types/storybook__react": "^5.2.1",
     "jsdom": "^26.0.0",
     "vite": "^6.1.1",
     "vitest": "^3.0.6"
