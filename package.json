@@ -10,7 +10,11 @@
     "run-format": "turbo run format",
     "run-test": "turbo run test",
     "run-preview": "vite preview",
-    "run-check-types": "tsc --noEmit"
+    "run-check-types": "tsc --noEmit",
+    "run-dev": "turbo run storybook --parallel",
+    "run-dev-core": "turbo run dev --scope nimbus-core",
+    "run-dev-preact": "turbo run dev --scope nimbus-preact",
+    "run-dev-react-native": "turbo run dev --scope nimbus-react-native"
   },
   "dependencies": {
     "react": "^19.0.0",

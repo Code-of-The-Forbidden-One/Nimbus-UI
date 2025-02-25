@@ -20,6 +20,9 @@
     },
     "test": {
       "dependsOn": ["^test"]
+    },
+    "storybook": {
+      "dependsOn": ["^storybook"]
     }
   }
 }
