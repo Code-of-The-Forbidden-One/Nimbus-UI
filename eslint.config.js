@@ -37,17 +37,29 @@ const baseConfig = {
         'newlines-between': 'always',
       },
     ],
-    'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-    'no-console': 'warn',
+    'no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^h$',
+      }
+    ],
+    'no-console': 'error',
     'semi': ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
     'indent': ['error', 2],
     'max-len': ['warn', { code: 80 }],
     'prettier/prettier': ['error'],
     'eol-last': ['error', 'always'],
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/explicit-function-return-type': 'warn',
-    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/explicit-function-return-type': 'error',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^h$',
+      }
+    ],
     'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
