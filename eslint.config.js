@@ -13,7 +13,7 @@ const baseConfig = {
   languageOptions: {
     ecmaVersion: 2020,
     globals: {
-      ... globals.browser,
+      ...globals.browser,
       ...globals.node,
     },
     parser: tsParser,
@@ -69,6 +69,53 @@ const baseConfig = {
     'curly': 'error',
     'prefer-const': 'error',
     'no-throw-literal': 'error',
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        'selector': 'variable',
+        'format': ['camelCase', 'UPPER_CASE'],
+        'leadingUnderscore': 'allow',
+      },
+      {
+        'selector': 'typeLike',
+        'format': ['PascalCase'],
+      },
+      {
+        'selector': 'enumMember',
+        'format': ['PascalCase'],
+      },
+      {
+        'selector': 'class',
+        'format': ['PascalCase'],
+      },
+      {
+        'selector': 'function',
+        'format': ['camelCase'],
+        'leadingUnderscore': 'allow',
+      },
+      {
+        'selector': 'property',
+        'format': ['camelCase'],
+      },
+      {
+        'selector': 'parameter',
+        'format': ['camelCase'],
+      },
+      {
+        'selector': 'interface',
+        'format': ['PascalCase'],
+      },
+      {
+        'selector': 'typeAlias',
+        'format': ['PascalCase'],
+      },
+      {
+        'selector': 'objectLiteralProperty',
+        'format': ['camelCase'],
+      },
+    ],
+    'prefer-destructuring': ['error', { object: true, array: false }],
+    'import/no-named-as-default': 'error',
   },
 };
 
