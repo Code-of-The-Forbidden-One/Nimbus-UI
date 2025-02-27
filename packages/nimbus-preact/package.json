@@ -19,7 +19,8 @@
     "lint": "eslint .",
     "test": "vitest --run",
     "format": "prettier --write .",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "build:types": "tsc --project tsconfig.types.json"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",

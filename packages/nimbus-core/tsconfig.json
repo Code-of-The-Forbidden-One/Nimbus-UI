@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "emitDeclarationOnly": true,
     "composite": true,
     "declaration": true,
     "declarationMap": true,
@@ -9,10 +10,8 @@
       "jest",
       "node",
       "vite",
-      "@vitejs/plugin-react",
       "vite/client",
-      "vitest",
-      "@types/storybook__react",
+      "vitest"
     ]
   },
   "include": ["src/**/*", "__tests__/**/*"],
