@@ -5,16 +5,37 @@
   "type": "module",
   "packageManager": "yarn@1.22.22",
   "scripts": {
-    "run-build": "turbo run build",
-    "run-lint": "turbo run lint",
-    "run-format": "turbo run format",
-    "run-test": "turbo run test",
-    "run-preview": "vite preview",
-    "run-check-types": "tsc --noEmit",
-    "run-dev": "turbo run storybook --parallel",
-    "run-dev-core": "turbo run dev --scope nimbus-core",
-    "run-dev-preact": "turbo run dev --scope nimbus-preact",
-    "run-dev-react-native": "turbo run dev --scope nimbus-react-native"
+    "run-build": "turbo run build ${SCOPE}",
+    "run-lint": "turbo run lint ${SCOPE}",
+    "run-format": "turbo run format ${SCOPE}",
+    "run-test": "turbo run test ${SCOPE}",
+    "run-check-types": "turbo run check-types ${SCOPE}",
+
+    "run-dev": "turbo run dev ${SCOPE}",
+
+    "run-dev-core": "yarn run run-dev --scope=nimbus-core",
+    "run-dev-preact": "yarn run run-dev --scope=nimbus-preact",
+    "run-dev-react-native": "yarn run run-dev --scope=nimbus-react-native",
+
+    "run-test-core": "yarn run run-test --scope=nimbus-core",
+    "run-test-preact": "yarn run run-test --scope=nimbus-preact",
+    "run-test-react-native": "yarn run run-test --scope=nimbus-react-native",
+
+    "run-lint-core": "yarn run run-lint --scope=nimbus-core",
+    "run-lint-preact": "yarn run run-lint --scope=nimbus-preact",
+    "run-lint-react-native": "yarn run run-lint --scope=nimbus-react-native",
+
+    "run-build-core": "yarn run run-build --scope=nimbus-core",
+    "run-build-preact": "yarn run run-build --scope=nimbus-preact",
+    "run-build-react-native": "yarn run run-build --scope=nimbus-react-native",
+
+    "run-format-core": "yarn run run-format --scope=nimbus-core",
+    "run-format-preact": "yarn run run-format --scope=nimbus-preact",
+    "run-format-react-native": "yarn run run-format --scope=nimbus-react-native",
+
+    "run-check-types-core": "yarn run run-check-types --scope=nimbus-core",
+    "run-check-types-preact": "yarn run run-check-types --scope=nimbus-preact",
+    "run-check-types-react-native": "yarn run run-check-types --scope=nimbus-react-native"
   },
   "dependencies": {
     "react": "^19.0.0",

@@ -18,6 +18,38 @@ frustration of submitting code that fails on our pipeline.
 
 We adhere to the MD standard in all of our Markdown files.
 
+## Running Our NPM Scripts
+
+This document explains the available **Turbo** scripts in **Nimbus-UI** and how to run them efficiently.
+
+---
+
+## 🚀 General Usage
+
+### **Run for All Packages**
+
+By default, running a command without specifying a package will execute it for **all packages**.
+
+```sh
+yarn run-build        # Runs build for all packages
+yarn run-lint         # Runs lint for all packages
+yarn run-format       # Runs format for all packages
+yarn run-test         # Runs tests for all packages
+yarn run-check-types  # Runs type checking for all packages
+yarn run-dev          # Runs Storybook for all packages
+```
+
+### **Run for a Specific Package**
+
+You can target a specific package using --scope:
+
+```sh
+yarn run-build --scope=nimbus-core
+yarn run-lint --scope=nimbus-preact
+yarn run-test --scope=nimbus-react-native
+yarn run-dev --scope=nimbus-core
+```
+
 ## Best Practices
 
 To ensure high-quality, maintainable, and scalable software, we follow several fundamental principles and methodologies. This document outlines these best practices and their practical application within our codebase.
