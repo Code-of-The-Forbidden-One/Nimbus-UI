@@ -6,6 +6,7 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import importPlugin from 'eslint-plugin-import';
 import prettier from 'eslint-plugin-prettier';
+import preferArrow from 'eslint-plugin-prefer-arrow';
 
 const baseConfig = {
   ignores: ['dist'],
@@ -24,6 +25,7 @@ const baseConfig = {
     '@typescript-eslint': tseslint,
     'import': importPlugin,
     'prettier': prettier,
+    'prefer-arrow': preferArrow,
   },
   rules: {
     'react/jsx-uses-react': 'off',
@@ -69,53 +71,35 @@ const baseConfig = {
     'curly': 'error',
     'prefer-const': 'error',
     'no-throw-literal': 'error',
+    'func-style': ['error', 'expression'],
+    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
+    'space-before-function-paren': ['error', 'never'],
+    'no-extra-semi': 'error',
     '@typescript-eslint/naming-convention': [
       'error',
       {
-        'selector': 'variable',
-        'format': ['camelCase', 'UPPER_CASE'],
-        'leadingUnderscore': 'allow',
-      },
-      {
-        'selector': 'typeLike',
-        'format': ['PascalCase'],
-      },
-      {
-        'selector': 'enumMember',
-        'format': ['PascalCase'],
-      },
-      {
         'selector': 'class',
-        'format': ['PascalCase'],
-      },
-      {
-        'selector': 'function',
-        'format': ['camelCase'],
-        'leadingUnderscore': 'allow',
-      },
-      {
-        'selector': 'property',
-        'format': ['camelCase'],
-      },
-      {
-        'selector': 'parameter',
-        'format': ['camelCase'],
+        'format': ['PascalCase']
       },
       {
         'selector': 'interface',
-        'format': ['PascalCase'],
+        'format': ['PascalCase']
       },
       {
-        'selector': 'typeAlias',
-        'format': ['PascalCase'],
-      },
+        'selector': 'enum',
+        'format': ['PascalCase']
+      }
+    ],
+    'import/prefer-default-export': 'error',
+    'import/no-duplicates': 'error',
+    'prefer-arrow/prefer-arrow-functions': [
+      'error',
       {
-        'selector': 'objectLiteralProperty',
-        'format': ['camelCase'],
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        allowStandaloneDeclarations: false,
       },
     ],
-    'prefer-destructuring': ['error', { object: true, array: false }],
-    'import/no-named-as-default': 'error',
   },
 };
 
