@@ -103,6 +103,32 @@ const baseConfig = {
   },
 };
 
+const extendedConfig = {
+  rules: {
+    'max-lines': ['warn', { 'max': 300, 'skipBlankLines': true, 'skipComments': true }],
+    'max-lines-per-function': ['warn', { 'max': 50, 'skipComments': true }],
+    'complexity': ['warn', { 'max': 10 }],
+    'import/no-cycle': ['error', { 'maxDepth': 1 }],
+    'no-unnecessary-condition': 'error',
+    'no-unused-vars': ['error', { 'argsIgnorePattern': '^_' }],
+    'prettier/prettier': ['error', { 'singleQuote': true, 'trailingComma': 'all' }],
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        'selector': 'variable',
+        'format': ['camelCase'],
+        'leadingUnderscore': 'allow',
+        'filter': {
+          'regex': '^(data|temp|foo|bar)$',
+          'match': false
+        }
+      }
+    ],
+    'import/no-named-as-default-member': 'error',
+    'sort-imports': ['error', { 'ignoreCase': false, 'ignoreDeclarationSort': true }]
+  }
+};
+
 export default [
   js.configs.recommended,
   {
@@ -111,6 +137,7 @@ export default [
       ...baseConfig.rules,
       ...reactHooks.configs.recommended.rules,
       ...tseslint.configs.recommended.rules,
+      ...extendedConfig.rules,
     },
   },
   {

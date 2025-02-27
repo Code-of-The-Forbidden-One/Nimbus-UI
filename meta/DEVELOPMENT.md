@@ -18,7 +18,7 @@ frustration of submitting code that fails on our pipeline.
 
 We adhere to the MD standard in all of our Markdown files.
 
-# Best Practices
+## Best Practices
 
 To ensure high-quality, maintainable, and scalable software, we follow several fundamental principles and methodologies. This document outlines these best practices and their practical application within our codebase.
 
