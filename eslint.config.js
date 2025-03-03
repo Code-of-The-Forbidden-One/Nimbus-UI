@@ -42,11 +42,11 @@ const baseConfig = {
     'no-unused-vars': [
       'error',
       {
-        argsIgnorePattern: '^_',
-        varsIgnorePattern: '^h$',
+        argsIgnorePattern": '^_',
+        varsIgnorePattern": '^h$',
       }
     ],
-    'no-console': 'error',
+    'no-console': ['error', { 'allow': ['warn', 'error'] }],
     'semi': ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
     'indent': ['error', 2],
@@ -58,18 +58,18 @@ const baseConfig = {
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
-        argsIgnorePattern: '^_',
-        varsIgnorePattern: '^h$',
+        argsIgnorePattern": '^_',
+        varsIgnorePattern": '^h$',
       }
     ],
     'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': 'error',
     '@typescript-eslint/ban-ts-comment': 'warn',
     'no-duplicate-imports': 'error',
     'no-magic-numbers': ['warn', { ignore: [0, 1] }],
     'curly': 'error',
-    'prefer-const': 'error',
+    'prefer-const': ['error', { 'destructuring': 'all' }],
     'no-throw-literal': 'error',
     'func-style': ['error', 'expression'],
     'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
@@ -100,58 +100,32 @@ const baseConfig = {
         allowStandaloneDeclarations: false,
       },
     ],
-  },
-};
-
-const extendedConfig = {
-  rules: {
-    'max-lines': ['warn', { 'max': 300, 'skipBlankLines': true, 'skipComments': true }],
-    'max-lines-per-function': ['warn', { 'max': 50, 'skipComments': true }],
-    'complexity': ['warn', { 'max': 10 }],
-    'import/no-cycle': ['error', { 'maxDepth': 1 }],
-    'no-unnecessary-condition': 'error',
-    'no-unused-vars': ['error', { 'argsIgnorePattern': '^_' }],
-    'prettier/prettier': ['error', { 'singleQuote': true, 'trailingComma': 'all' }],
-    '@typescript-eslint/naming-convention': [
-      'error',
-      {
-        'selector': 'variable',
-        'format': ['camelCase'],
-        'leadingUnderscore': 'allow',
-        'filter': {
-          'regex': '^(data|temp|foo|bar)$',
-          'match': false
-        }
-      }
-    ],
-    'import/no-named-as-default-member': 'error',
-    'sort-imports': ['error', { 'ignoreCase': false, 'ignoreDeclarationSort': true }]
+    'prefer-destructuring': ['error', { 'object': true, 'array': false }],
+    'no-eval': 'error',
+    'react/jsx-props-no-spreading': ['warn', { 'html': 'enforce', 'custom': 'enforce' }],
+    'react/require-default-props': ['error', { 'forbidDefaultForRequired': true }],
+    'react/jsx-no-useless-fragment': 'warn',
+    'react/jsx-key': 'error',
+    'react/no-danger': 'warn',
+    'no-param-reassign': ['error', { 'props': true }],
+    'linebreak-style': ['error', 'unix'],
+    'no-unneeded-ternary': 'error',
+    'no-cond-assign': ['error', 'always'],
+    'no-new': 'error',
+    'no-alert': 'error',
+    'react/jsx-no-bind': ['error', { 'ignoreRefs': true }],
+    'react/no-unescaped-entities': 'warn',
+    'react/boolean-prop-naming': ['error', { 'rule': '^(is|has|should)[A-Z]' }],
+    'require-await': 'error',
+    'no-implied-eval': 'error',
+    'default-case': 'error',
+    'max-statements-per-line': ['error', { 'max': 1 }],
+    'no-commented-out-code': 'warn',
+    'import/newline-after-import': ['error', { 'count': 1 }]
   }
 };
 
 export default [
   js.configs.recommended,
-  {
-    ...baseConfig,
-    rules: {
-      ...baseConfig.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...tseslint.configs.recommended.rules,
-      ...extendedConfig.rules,
-    },
-  },
-  {
-    files: ['**/*.{ts,tsx}', 'packages/**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-      parser: tsParser,
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-    },
-    rules: {
-      ...tseslint.configs.recommended.rules,
-    },
-  },
+  baseConfig,
 ];
