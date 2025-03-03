@@ -121,7 +121,8 @@ const baseConfig = {
     'default-case': 'error',
     'max-statements-per-line': ['error', { 'max': 1 }],
     'no-commented-out-code': 'warn',
-    'import/newline-after-import': ['error', { 'count': 1 }]
+    'import/newline-after-import': ['error', { 'count': 1 }],
+    "no-else-return": ["error", { "allowElseIf": false }]
   }
 };
 
