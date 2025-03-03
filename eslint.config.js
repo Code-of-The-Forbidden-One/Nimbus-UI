@@ -42,8 +42,8 @@ const baseConfig = {
     'no-unused-vars': [
       'error',
       {
-        argsIgnorePattern": '^_',
-        varsIgnorePattern": '^h$',
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^h$',
       }
     ],
     'no-console': ['error', { 'allow': ['warn', 'error'] }],
@@ -125,7 +125,18 @@ const baseConfig = {
   }
 };
 
+const extendedConfig = {
+  rules: {
+    'max-lines': ['warn', { 'max': 300, 'skipBlankLines': true, 'skipComments': true }],
+    'max-lines-per-function': ['warn', { 'max': 50, 'skipComments': true }],
+    'complexity': ['warn', { 'max': 10 }],
+    'import/no-cycle': ['error', { 'maxDepth': 1 }],
+    'no-unnecessary-condition': 'error',
+  }
+};
+
 export default [
   js.configs.recommended,
   baseConfig,
+  extendedConfig,
 ];
