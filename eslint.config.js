@@ -122,7 +122,8 @@ const baseConfig = {
     'max-statements-per-line': ['error', { 'max': 1 }],
     'no-commented-out-code': 'warn',
     'import/newline-after-import': ['error', { 'count': 1 }],
-    "no-else-return": ["error", { "allowElseIf": false }]
+    "no-else-return": ["error", { "allowElseIf": false }],
+    "react/style-prop-object": ["error"]
   }
 };
 
