@@ -61,3 +61,5 @@
 | import/no-cycle | error | Prevent import cycles | Avoids circular dependencies |
 | no-unnecessary-condition | error | Disallow unnecessary conditions in if statements | Improves logic clarity |
 | no-else-return | error | Disallow unnecessary else blocks when return is used | Encourages guard statements for cleaner, less-nested code |
+| react/style-prop-object | error | Enforce using className over inline style | Improves maintainability, performance, and consistency |
+
