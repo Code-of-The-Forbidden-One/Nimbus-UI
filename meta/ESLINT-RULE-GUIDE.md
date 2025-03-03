@@ -60,3 +60,4 @@
 | complexity | warn | Limit cyclomatic complexity | Helps keep functions simple and readable |
 | import/no-cycle | error | Prevent import cycles | Avoids circular dependencies |
 | no-unnecessary-condition | error | Disallow unnecessary conditions in if statements | Improves logic clarity |
+| no-else-return | error | Disallow unnecessary else blocks when return is used | Encourages guard statements for cleaner, less-nested code |
